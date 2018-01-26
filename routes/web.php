@@ -17,4 +17,12 @@ Route::get('/', function () {
 Route::get('boissons','ListeBoissonsController@listBoisson');
 Route::get('boissons/listByName','ListeBoissonsController@orderByName');
 Route::get('boissons/listByPrice','ListeBoissonsController@orderByPrice');
-Route::get('boissons/{id}','ListeBoissonsController@editboisson');
+Route::delete('boissons/{id}','ListeBoissonsController@destroy');
+
+Route::get('boissons/addNewDrink','AddDrinkController@create');
+Route::post('boissons','AddDrinkController@store');
+
+Route::get('boissons/edit/{id}','ListeBoissonsController@editBoisson');
+Route::put('boissons/{id}','ListeBoissonsController@update' );
+
+Route::get('boissons/{id}','ListeBoissonsController@showBoisson');
