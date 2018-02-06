@@ -15,10 +15,17 @@ La page des infos boissons
     </thead>
     <tbody>
     <tr>
-        <td>{{$boisson->nom}}</td>
-        <td>{{$boisson->nom}}</td>
-        <td>{{$boisson->prix}} centimes</td>
-        <td>{{$boisson->CODE}}</td>
+
+            @foreach($boisson as $boisso)
+            <td>{{$boisso->nom}}</td>
+            <td>{{$boisso->nom}}</td>
+            <td>{{$boisso->prix}} centimes</td>
+            <td>{{$boisso->CODE}}</td>
+
+
+            @endforeach
+
+       
     </tr>
     *</tbody>
 </table>

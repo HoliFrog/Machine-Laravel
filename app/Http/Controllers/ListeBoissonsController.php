@@ -21,7 +21,9 @@ class ListeBoissonsController extends Controller
     public function showBoisson($id)
     {
 
-        $boisson = Boisson::find($id);
+//        $boisson = Boisson::find($id);
+        $boisson = DB::select('Select * from boissons where boissons.id = id limit 1 ');
+//        dd($boisson);
 
 
 
