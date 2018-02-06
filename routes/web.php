@@ -25,4 +25,4 @@ Route::post('boissons','AddDrinkController@store');
 Route::get('boissons/edit/{id}','ListeBoissonsController@editBoisson');
 Route::put('boissons/{id}','ListeBoissonsController@update' );
 
-Route::get('boissons/{id}','ListeBoissonsController@showBoisson');
+Route::get('/boissons/{id}','ListeBoissonsController@showBoisson');

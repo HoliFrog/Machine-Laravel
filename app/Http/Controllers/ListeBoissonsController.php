@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Boisson;
 
 class ListeBoissonsController extends Controller
@@ -10,7 +11,8 @@ class ListeBoissonsController extends Controller
     public function listBoisson()
     {
 
-        $listeBoissons = Boisson::get();
+        //$listeBoissons = Boisson::get();
+        $listeBoissons = DB::select('SELECT * from boissons');
 
 
         return view('liste_boissons', compact('listeBoissons'));
@@ -20,6 +22,7 @@ class ListeBoissonsController extends Controller
     {
 
         $boisson = Boisson::find($id);
+
 
 
         return view('infoBoisson', compact('boisson'));
