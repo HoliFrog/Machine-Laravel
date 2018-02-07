@@ -16,18 +16,18 @@ La page des infos boissons
     <tbody>
     <tr>
 
-            @foreach($boisson as $boisso)
-            <td>{{$boisso->nom}}</td>
-            <td>{{$boisso->nom}}</td>
-            <td>{{$boisso->prix}} centimes</td>
-            <td>{{$boisso->CODE}}</td>
+            {{--@foreach($boisson as $boisso)--}}{{--pour le dépoiement d'un tabelau de raw query--}}
+            <td>{{$boisson->nom}}</td>
+            <td>{{$boisson->nom}}</td>
+            <td>{{$boisson->prix}} centimes</td>
+            <td>{{$boisson->CODE}}</td>
 
 
-            @endforeach
+            {{--@endforeach--}}
 
 
     </tr>
-    *</tbody>
+    </tbody>
 </table>
 </div>
 

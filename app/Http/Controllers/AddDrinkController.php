@@ -39,6 +39,7 @@ class AddDrinkController extends Controller
     {
         Boisson::create(['nom'=>$request->nom, 'prix'=>$request->prix, 'CODE'=>$request->CODE]);
 
+
     return redirect('/boissons');
     }
 

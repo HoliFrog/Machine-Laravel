@@ -17,6 +17,7 @@
             </th>
             <th>Modification</th>
             <th>Suppression</th>
+            <th>Commander</th>
 
             </thead>
             <tbody>
@@ -35,13 +36,28 @@
                             <input type="submit" class="btn btn-danger btn-lg"  value="Supprimer la boisson {{$boisson->nom}}" >
                         </form>
                     </td>
+                    <td>
+                        <form action="/boissons/{{$boisson->id}}" method="POST">
+
+                            {{ csrf_field() }}
+                            <input  type="submit" class="btn btn-primary" value="J'achète!!">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
 
             </tbody>
         </table>
+
         <a type="button" class="btn btn-primary btn-lg" href="{{url('boissons/addNewDrink')}}">Créer nouvelle
             boisson </a>
-
     </div>
+<div class="container">
+    {{--@foreach($ventes as $vente)--}}
+        {{--<p><em>--}}
+                {{--{{$vente->boisson->nom}}--}}
+            {{--</em></p>--}}
+        {{--@endforeach--}}
+</div>
+
 @endsection

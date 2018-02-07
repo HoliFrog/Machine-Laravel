@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('boissons','ListeBoissonsController@listBoisson');
+//Route::get('boissons','ListeBoissonsController@venteShow');
 Route::get('boissons/listByName','ListeBoissonsController@orderByName');
 Route::get('boissons/listByPrice','ListeBoissonsController@orderByPrice');
 Route::delete('boissons/{id}','ListeBoissonsController@destroy');
+Route::post('boissons/{boisson}','ListeBoissonsController@venteStore');
+//Attention, dans laravel, un lien est créé si le parametre de la route à le même nom que celui de la méthode appelée!!
 
 Route::get('boissons/addNewDrink','AddDrinkController@create');
 Route::post('boissons','AddDrinkController@store');

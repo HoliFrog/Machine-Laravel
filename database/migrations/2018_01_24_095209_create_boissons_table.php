@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateBoissonsTable extends Migration
 {
+
+
     /**
      * Run the migrations.
      *
@@ -19,6 +21,9 @@ class CreateBoissonsTable extends Migration
             $table->string('nom');
             $table->integer('prix');
 
+        });
+        Schema::table('ventes', function (Blueprint $table){
+            $table->integer('boisson_id')->unsigned()->index();
         });
     }
 
