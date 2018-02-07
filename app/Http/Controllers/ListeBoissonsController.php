@@ -24,6 +24,7 @@ class ListeBoissonsController extends Controller
         //Attention il faut que le parametre de la route ai le même nom que l'objet créé en parametre!!!
 //        $boisson = Boisson::find($id);
 //        dd($boisson);
+        //
         Vente::create(['boisson_id'=>$boisson->id,'total'=>$boisson->prix,'Nom_boisson'=>$boisson->nom]);
         return redirect('/boissons');
     }
