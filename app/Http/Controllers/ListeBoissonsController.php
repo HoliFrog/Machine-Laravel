@@ -22,7 +22,7 @@ class ListeBoissonsController extends Controller
     {
 
 //        $boisson = Boisson::find($id);
-        $boisson = DB::select('Select * from boissons where boissons.id = id limit 1 ');
+        $boisson = DB::select('Select * from boissons where boissons.id =  ? limit 1 ', [$id]);
 //        dd($boisson);
 
 

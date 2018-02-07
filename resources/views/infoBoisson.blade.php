@@ -25,7 +25,7 @@ La page des infos boissons
 
             @endforeach
 
-       
+
     </tr>
     *</tbody>
 </table>
